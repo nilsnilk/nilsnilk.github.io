@@ -1,0 +1,188 @@
+#menu {
+overflow: hidden;
+}
+#header {
+	padding: 60px;
+	text-align: center;
+	color: white;
+	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
+	font-size: 46pt;
+	background-color: rgb(48, 48, 48);
+}
+#footer {
+
+}
+
+#background {
+	position: fixed;
+	margin-left: -200vw;
+	margin-top: -200vh;
+	display: grid;
+	row-gap: 100px;
+	grid-template-columns: 100%;
+	transform: rotate(45deg);
+	z-index: -2;
+}
+#background > div {
+	width: 400vw;
+	height: 100px;
+	background-color: rgb(48, 48, 48);
+}
+#about > .grid-container {
+	grid: 100% / 50% 50%;
+}
+#projects > .grid-container {
+	grid: 50% 50% / 50% 50%;
+}
+#contact > .grid-container {
+
+}
+/*html {
+	scroll-snap-type: y mandatory;
+}*/
+body {
+	margin: 0;
+	background-color:rgb(50, 50, 50);
+}
+section {
+	/*scroll-snap-align: start;*/
+	/*height: 1000px;*/
+}
+.grid-container {
+	height: 100%;
+	width: 600px;
+	display: grid;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: stretch;
+}
+.grid-item {
+}
+.text-container {
+	min-height: 400px;
+	padding: 10%;
+	overflow-y: scroll;
+	scrollbar-width: none;
+	border-top: rgb(95, 95, 95) 2px solid;
+	background-color: rgba(55, 55, 55, 0.5);
+}
+.text-container::-webkit-scrollbar {
+	display: none;
+}
+.text-container > p {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 12pt;
+	color: rgb(175, 175, 175);
+	line-height: 1.2;
+}
+.text-container > h1, .banner > h1 {
+	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
+	font-weight: normal;
+	font-size: 36pt;
+	color: rgb(116, 170, 240);
+}
+.text-container > h2 {
+	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
+	size: 16pt;
+	color: white;
+}
+.media-container {
+	margin: auto;
+	padding: 10%;
+}
+.media-container > img {
+	width: 100%;
+	display: block;
+}
+.modal {
+	display: grid;
+	position: fixed;
+	opacity: 1;
+	top: 0;
+	overflow: auto;
+	z-index: 1;
+	grid-template-columns: 50% 50%;
+	width: 600px;
+	height: 100vh;
+	align-items: center;
+	background-color: rgb(48, 48, 48);
+	-webkit-transition: opacity .2s;
+       -moz-transition: opacity .2s;
+        -ms-transition: opacity .2s;
+         -o-transition: opacity .2s;
+            transition: opacity .2s;
+}
+.hidden {
+	opacity: 0;
+	z-index: -1;
+}
+.clickable {
+    transition: transform 0.1s linear;
+}
+.clickable:hover {
+	transform: scale(1.01);
+	background-color: rgba(55, 55, 55, 0.25);
+}
+
+.framed {
+	border: white 2pt solid;
+}
+.banner {
+	grid-column: span 2;
+	border-top: rgb(95, 95, 95) 2px solid;
+	text-align: left;
+	background-color: transparent;
+	padding-left: 20px;
+}
+div.cross {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.1s linear;
+}
+div.cross:hover {
+    transform: rotate(90deg);
+}
+div.cross:before, div.cross:after {
+    position: absolute;
+    left: 20px;
+    content: ' ';
+    height: 50px;
+    width: 10px;
+    background-color: white;
+}
+.cross:before {
+    transform: rotate(45deg);
+}
+.cross:after {
+    transform: rotate(-45deg);
+}
+@media screen and (min-width: 960px) and (max-width: 1439px) {
+	.grid-container {
+		width: 920px;
+	}	
+}
+@media screen and (min-width: 1440px) and (max-width: 1999px) {
+	.grid-container, .modal {
+		width: 1400px;
+	}	
+}
+@media screen and (min-width: 2000px) {
+	.grid-container, .modal{
+		width: 1960px;
+	}	
+} 
+@media screen and (max-width: 959px) and (orientation: portrait) {
+	#header {
+		padding: 10px;
+		font-size: 32pt;
+	}
+	.grid-container, .modal {
+		width: 100%;
+	}
+	.grid-item, .modal > div {
+		grid-column: span 2;
+	}
+}
