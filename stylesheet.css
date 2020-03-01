@@ -160,7 +160,7 @@ div.cross:before, div.cross:after {
     transform: rotate(-45deg);
 }
 @media screen and (min-width: 960px) and (max-width: 1439px) {
-	.grid-container {
+	.grid-container, .modal {
 		width: 920px;
 	}	
 }
