@@ -128,7 +128,6 @@ section {
 	border: white 2pt solid;
 }
 .banner {
-	display: block;
 	grid-column: span 2;
 	border-top: rgb(95, 95, 95) 2px solid;
 	text-align: left;
