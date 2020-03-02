@@ -8,8 +8,8 @@
 		<script src="js-functions.js"></script>
         <title>Nils Sundberg's portfolio</title>
     </head>
-	<body>
-		<div id="background">
+	<body id="_body">
+		<!-- <div id="background"> 
 			<div></div>
 			<div></div>
 			<div></div>
@@ -24,69 +24,189 @@
 			<div></div>
 			<div></div>
 			<div></div>
-		</div>
-		<div id="header">NILS SUNDBERG'S PORTFOLIO</div>
-		<section id="about">
-			<div class="grid-container">
-				<div class="grid-item banner">
-					<h1>ABOUT ME</h1>
-				</div>
-				<div class="grid-item">
-					<div class="text-container">
-						<p>
-							My name is Nils Sundberg and I am 27 years old. I study at Umeå University in Sweden, and I am currently finished with the third year out of a five year civil engineering programme called "interaktion och design".
+		</div> -->
+		
+		<div class="grid-container">
+			<div id="header">NILS SUNDBERG'S PORTFOLIO</div>
+			<div class="grid-item banner">
+				<h1>ABOUT ME</h1>
+			</div>
+			<div class="text-container">
+				<p>
+					My name is Nils Sundberg and I am 27 years old. I study at Umeå University in Sweden, and I am currently finished with the third year out of a five year civil engineering programme called "interaktion och design".
 The name of this programme roughly translates from swedish into "Interaction design", and mainly concerns the subjects of computer science and interaction design respectively. The interdiciplinary nature of the programme (also the interaction design subject in itself) makes the courses very versatile, which gives the students the freedom to niche themselves in some degree.
 I have found myself to enjoy programming in general, and making small conceptual programmes such as mobile and web applications in particular. 
-						</p>
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="media-container">
+				</p>
+			</div>
+			<div class="media-container">
+				<img src="Bilder/me.jpg" alt="https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/81527123_10214285213438400_3761503976692908032_n.jpg?_nc_cat=109&_nc_sid=ad2b24&_nc_ohc=uFKFWeadyMcAX_62U2R&_nc_ht=scontent-arn2-1.xx&oh=ad66b048fc27b83758fcc761316b94f3&oe=5EB9367F" class="framed">
+			</div>
+			<div class="grid-item banner">
+				<h1>PROJECTS</h1>
+			</div>
+			<div class="media-container clickable" onclick="toggleShowcase('iism_modal')">
+				<img src="Bilder/bg_iism.png">
+				<h3>AR ENVIRONMENT FOR DEMENTIA PATIENTS</h3>
+			</div>
+			<div class="media-container clickable" onclick="toggleShowcase('schnell_modal')">
+				<img class="framed" src="bilder/poster_dbt_small.png">
+				<h3>SCHNELLE BRILLEN APP</h3>
+			</div>
+			<div class="media-container clickable" onclick="toggleShowcase('wb_modal')">
+				<img src="Bilder/bg_wb.png">
+				<h3>COMMUNITY FOR WEATHER TALK</h3>
+			</div>
+			<div class="media-container clickable" onclick="toggleShowcase('mapdraw_modal')">
+				<img src="Bilder/mapdraw2.png" class="framed">
+				<h3>MAPDRAW</h3>
+			</div>
+			<div class="grid-item banner">
+				<h1>CONTACT</h1>
+			</div>
+			<div class="text-container">
 
-					</div>
-				</div>
-		</section>
-		<section id="projects">
+			</div>
+			<div class="media-container">
+				<a href="mailto:nisu090@protonmail.com" class="clickable">
+					Mail
+				</a>
+			</div>
+			<div id="footer">
+				blablabla
+			</div>
+		</div>
+		<div id="iism_modal" class="modal hidden">
+			<div class="cross" onclick="closeShowCase()"></div>
 			<div class="grid-container">
-				<div class="grid-item banner">
-					<h1>PROJECTS</h1>
+				<div class="banner">
+					<h1>AR ENVIRONMENT FOR DEMENTIA PATIENTS</h1>
 				</div>
-				<div class="grid-item">
-					<div class="media-container clickable" onclick="toggleShowcase('iism_modal')">
-						<img src="Bilder/bg_iism.png">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="media-container clickable">
-						<img class="framed" src="Bilder/poster_dbt_small.png">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="media-container clickable">
-						<img src="Bilder/bg_wb.png" alt="">
-					</div>
-				</div>
-				<div class="grid-item">
-					<div class="media-container clickable">
+				<div class="text-container">	
+					<h2>INTRODUCTION</h2>	
+					<p>
 						
-					</div>
+					</p>
 				</div>
-				<div id="iism_modal" class="modal hidden">
-					<div class="cross" onclick="closeShowCase()"></div>
-					<div class="text-container">
-						<p>blablabla</p>
-					</div>
-					<div class="media-container">
-						<img src="Bilder/bg_wb.png" alt="">
-					</div>
+				<div class="media-container">
+					<img src="Bilder/IISM_POC2.png">
 				</div>
-		</section>
-		<section id="contact">
-				<div class="grid-container">
+				<div class="text-container">
+					<h2>TOOLS AND METHODS</h2>
+					<p>
 
+					</p>
 				</div>
-		</section>
-		
+				<div class="media-container">
+					<img src="Bilder/mapdraw.png">
+				</div>
+				<div class="text-container">
+					<h2>RESULT</h2>
+					<p>
+
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="schnell_modal" class="modal hidden">
+			<div class="cross" onclick="closeShowCase()"></div>
+			<div class="grid-container">
+				<div class="banner">
+					<h1>SCHNELLE BRILLEN APP</h1>
+				</div>
+				<div class="text-container">	
+					<h2>INTRODUCTION</h2>	
+					<p>
+						
+					</p>
+				</div>
+				<div class="media-container">
+					<img class="framed" src="Bilder/poster_dbt_finished_png.png">
+				</div>
+				<div class="text-container">
+					<h2>TOOLS AND METHODS</h2>
+					<p>
+
+					</p>
+				</div>
+				<div class="media-container">
+					<img src="Bilder/schnelleb.png">
+				</div>
+				<div class="text-container">
+					<h2>RESULT</h2>
+					<p>
+
+					</p>
+				</div>
+				<div class="media-container">
+					<img class="framed" src="Bilder/schnelleb2.png">
+				</div>
+				
+			</div>
+		</div>
+		<div id="wb_modal" class="modal hidden">
+			<div class="cross" onclick="closeShowCase()"></div>
+			<div class="grid-container">
+				<div class="banner">
+					<h1>COMMUNITY FOR WEATHER TALK</h1>
+				</div>
+				<div class="text-container">	
+					<h2>INTRODUCTION</h2>	
+					<p>
+						
+					</p>
+				</div>
+				<div class="media-container">
+					<img src="Bilder/mapdraw.png">
+				</div>
+				<div class="text-container">
+					<h2>TOOLS AND METHODS</h2>
+					<p>
+
+					</p>
+				</div>
+				<div class="media-container">
+					<img src="Bilder/mapdraw.png">
+				</div>
+				<div class="text-container">
+					<h2>RESULT</h2>
+					<p>
+
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="mapdraw_modal" class="modal hidden">
+			<div class="cross" onclick="closeShowCase()"></div>
+			<div class="grid-container">
+				<div class="banner">
+					<h1>MAPDRAW</h1>
+				</div>
+				<div class="text-container">	
+					<h2>INTRODUCTION</h2>	
+					<p>
+						
+					</p>
+				</div>
+				<div class="media-container">
+					<img src="Bilder/mapdraw.png">
+				</div>
+				<div class="text-container">
+					<h2>TOOLS AND METHODS</h2>
+					<p>
+
+					</p>
+				</div>
+				<div class="media-container">
+					<img src="Bilder/mapdraw.png">
+				</div>
+				<div class="text-container">
+					<h2>RESULT</h2>
+					<p>
+
+					</p>
+				</div>
+
+			</div>
 		</div>
 	</body>
 </html>
