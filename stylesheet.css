@@ -108,11 +108,11 @@ section {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(48, 48, 48);
-	-webkit-transition: opacity .2s;
-	-moz-transition: opacity .2s;
-	-ms-transition: opacity .2s;
-	-o-transition: opacity .2s;
-	transition: opacity .2s;
+	-webkit-transition: opacity .2s linear;
+   	   -moz-transition: opacity .2s linear;
+	    -ms-transition: opacity .2s linear;
+	     -o-transition: opacity .2s linear;
+	        transition: opacity .2s linear;
 }
 .clickable {
 	background-color: transparent;
@@ -123,7 +123,6 @@ section {
 	        transition: background-color 100ms linear;
 }
 .clickable > h3 {
-	position: absolute;
 	margin: 2px;
 	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
 	font-weight: normal;
@@ -185,6 +184,10 @@ section {
 @media screen and (min-width: 960px) and (max-width: 1439px) {
 	.grid-container {
 		width: 920px;
+	}
+	.clickable > h3 {
+		font-size: 12pt;
+		opacity: 1;
 	}	
 }
 @media screen and (min-width: 1440px) and (max-width: 1999px) {
@@ -196,7 +199,7 @@ section {
 	.grid-container {
 		width: 1960px;
 	}	
-} 
+}
 @media screen and (max-width: 959px) and (orientation: portrait) {
 	#header {
 		padding: 10px;
@@ -209,7 +212,7 @@ section {
 	.grid-container > div {
 		grid-column: span 2;
 	}
-	.media-container > h3 {
+	.clickable > h3 {
 		font-size: 8pt;
 		opacity: 1;
 	}
