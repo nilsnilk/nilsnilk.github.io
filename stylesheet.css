@@ -5,7 +5,7 @@
 	grid-column: span 2;
 	text-align: left;
 	padding-left: 20px;
-	padding-top: 40px;
+	padding-top: 50px;
 	padding-bottom: 40px;
 	font-size: 22pt;
 	color: white;
@@ -44,7 +44,7 @@ li {
 	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
 	font-weight: normal;
 	font-size: 12pt;
-	color: rgb(205, 205, 205);
+	color: white;
 }
 a {
 	text-decoration: none;
