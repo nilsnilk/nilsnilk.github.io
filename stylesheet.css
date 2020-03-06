@@ -253,8 +253,8 @@ br {
 		padding: 0;
 	}
 	.text-container {
-		padding-left: 20px;
-		padding-right: 20px;
+		padding-left: 10vw;
+		padding-right: 20vw;
 	}
 	.grid-container > div {
 		grid-column: span 2;
