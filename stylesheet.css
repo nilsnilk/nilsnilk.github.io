@@ -10,22 +10,6 @@
 	font-size: 22pt;
 	color: white;
 	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
-	
-/*	
-	text-align: center;
-	background-color: rgb(48, 48, 48);*/
-}
-#footer {
-	grid-column: span 2;
-	text-align: left;
-	border-top: rgb(95, 95, 95) 2px solid;
-	padding-left: 20px;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	font-family: 'Roboto', Arial, sans-serif;
-	font-size: 10pt;
-	color: rgb(175, 175, 175);
-	line-height: 1.2;	
 }
 #background {
 	position: fixed;
@@ -49,9 +33,57 @@ body {
 	margin: 0;
 	background-color: rgb(48, 48, 48);
 }
-section {
-	/*scroll-snap-align: start;*/
-	/*height: 1000px;*/
+ul {
+	list-style-type: none;
+	text-align: center;
+	padding: 10px;
+}
+li {
+	display: inline;
+	margin: 10px;
+	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
+	font-weight: normal;
+	font-size: 12pt;
+	color: rgb(116, 170, 240);
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	color: rgb(116, 170, 240);
+}
+
+/* visited link */
+a:visited {
+color: rgb(116, 170, 240);
+}
+
+/* mouse over link */
+a:hover {
+color: rgb(146, 184, 235);
+}
+
+/* selected link */
+a:active {
+	color: rgb(116, 170, 240);
+}
+br {
+    display: block;
+    margin: 5px 0;
+    line-height: 20px;
+}
+.footer {
+	grid-column: span 2;
+	text-align: left;
+	border-top: rgb(95, 95, 95) 2px solid;
+	margin-top: 200px;
+	padding-left: 20px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 10pt;
+	color: rgb(175, 175, 175);
+	line-height: 1.2;	
 }
 .grid-container {
 	padding-left: calc(100vw - 100%);
@@ -61,7 +93,8 @@ section {
 	margin-right: auto;
 	grid-template-columns: 50% 50%;
 }
-.grid-item {
+.grid-container > div {
+	align-self: center;
 }
 .text-container {
 	padding: 10%;
@@ -82,22 +115,34 @@ section {
 	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
 	font-weight: normal;
 	font-size: 18pt;
-	color: rgb(116, 170, 240);
+	color: rgb(165, 165, 165);
 }
 .text-container > h2 {
 	font-family: 'IBM Plex Sans','Open Sans', sans-serif;
 	font-weight: normal;
-	size: 14pt;
-	color: rgb(175, 175, 175);
+	font-size: 16pt;
+	color: rgb(165, 165, 165);
 }
 .media-container {
 	margin: auto;
 	padding: 10%;
-	
 }
 .media-container > img {
 	width: 100%;
+	height: auto;
 	display: block;
+}
+.media-container > p {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2px;
+	max-width: 350px;
+	text-align: center;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 11pt;
+	font-style: italic;
+	color: rgb(175, 175, 175);
+	line-height: 1.2;
 }
 .modal {
 	display: block;
@@ -108,11 +153,11 @@ section {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(48, 48, 48);
-	-webkit-transition: opacity .2s linear;
-   	   -moz-transition: opacity .2s linear;
-	    -ms-transition: opacity .2s linear;
-	     -o-transition: opacity .2s linear;
-	        transition: opacity .2s linear;
+	-webkit-transition: opacity 100ms linear;
+   	   -moz-transition: opacity 100ms linear;
+	    -ms-transition: opacity 100ms linear;
+	     -o-transition: opacity 100ms linear;
+	        transition: opacity 100ms linear;
 }
 .clickable {
 	background-color: transparent;
@@ -186,8 +231,6 @@ section {
 		width: 920px;
 	}
 	.clickable > h3 {
-		font-size: 12pt;
-		opacity: 1;
 	}	
 }
 @media screen and (min-width: 1440px) and (max-width: 1999px) {
@@ -200,21 +243,23 @@ section {
 		width: 1960px;
 	}	
 }
-@media screen and (max-width: 959px) and (orientation: portrait) {
+@media screen and (max-width: 959px) {
+	#portrait {
+		order: 1;
+	}
 	#header {
 		padding: 10px;
 		text-align: center;
 	}
 	.grid-container {
-		width: 100%;
+		width: 80%;
 		padding: 0;
 	}
 	.grid-container > div {
 		grid-column: span 2;
 	}
-	.clickable > h3 {
-		font-size: 8pt;
-		opacity: 1;
+	.media-container > img {
+		max-width: 400px;
 	}
 	.banner {
 		margin-top: 20px;
