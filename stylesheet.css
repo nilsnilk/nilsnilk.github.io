@@ -252,6 +252,10 @@ br {
 		width: 80%;
 		padding: 0;
 	}
+	.text-container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	.grid-container > div {
 		grid-column: span 2;
 	}
