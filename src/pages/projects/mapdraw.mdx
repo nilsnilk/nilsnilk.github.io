@@ -1,0 +1,28 @@
+---
+title: Mapdraw
+image: mapdraw2.png
+---
+## Project Summary
+
+This project was part of a course at Umeå University, where the objective was to create a prototype for a mobile application.
+
+Me and the rest of my group decided to make a GPS-position based game where the users could "draw" on a map by walking around. The user would push a button which left a trail behind them on the map when they moved. We wanted the user to be able to change color and thickness of the trail. Lastly, we wanted that other users could see the drawings on their devices as they were made in real-time.
+
+In order to do this we first decided to create a client for IOS with Swift and a server built with Node.js, MongoDB, Mongoose and socket.io. Even though the server was ready to go we decided to scrap the real-time solution; we determined that we didn't have the time needed in order to implement the sockets on the client-side. In the end we ended up with a solution where the user can choose whether they want to upload the drawing or not. In the socket.io-based solution required the client to continually send its position to the server. The solution we settled with only needed to post the drawing once to the database, which was fairly easy to implement with MongoDB and Mongoose. 
+
+### Role
+Developer, Front End Designer
+
+### Gallery
+
+![Image of user interface](mapdraw.png)
+*User interface of the final prototype, with drawings visible on the screen. The button at the bottom of the screen starts the drawing process. When the button is held, the icon will be changed to indicate that user currently is drawing. Current color is indicated by the position marker, which is visible to the left side of the screen. *
+
+![Image of user interface](mapdraw3.png)
+*When the user is done with the drawing it can swipe to the plus-sign in order to store the drawing in the database... *
+
+![Image of user interface](mapdraw4.png)
+*... Or if the user want to discard the drawing, it can swipe to the x-sign. *
+
+![Image of user interface](mapdraw5.png)
+*The color choice menu will appear if the user presses the position indicator, where up-down movement determines the color and left-right determines shade. *

@@ -1,0 +1,59 @@
+@charset "utf-8";
+//custom css
+
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5, .modal h6 {
+	color: rgba(255, 255, 255, 100) !important;	
+}
+
+.modal img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hidden {
+	opacity: 0;
+	transition: all ease-in-out .1s;
+}
+div.box {
+	border-radius: 0 !important;
+}
+div.project-box {
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+	box-shadow: none !important;
+	color: black !important;
+	
+}
+div.project-box:hover .hidden {
+	opacity: 1;
+}
+div.project-box > div {
+	position: absolute;
+}
+
+ .modal-content {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: hidden;
+}
+.modal-content::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+// If need, change your variables before importing Bulma
+$title-color: rgba(255, 255, 255, 100) !important;
+$subtitle-color: rgba(255, 255, 255, 100) !important;
+//$family-primary: 'Roboto', regular;
+//$modal-background-background-color: #363636;
+@import "~bulma/bulma.sass";
+@font-face {
+	font-family: "JetBrains Mono Regular";
+	src: url("./fonts/JetbrainsMonoRegular-RpvmM.ttf");
+}
+@font-face {
+	font-family: "Roboto";
+	src: url("./fonts/RobotoLight-aW3R.ttf");
+}

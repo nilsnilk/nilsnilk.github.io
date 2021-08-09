@@ -1,0 +1,25 @@
+---
+title: LoRa Cleaning App
+image: stad.png
+---
+## Project Summary
+
+This project was part of a course at Umeå University where you were given access to a network of LoRa-sensors that were spread across campus. The goal of the project was to use create an application that utilized these sensors.
+
+The sensors were able to register if people were in its proximity using a infra-red sensor. Me and the rest of my group came up with an app which used this together with the current weather (provided by the Umeå University's weather station) determined if a space with a sensor needed cleaning. The idea was that the spaces would become dirty faster under wet weather conditions.
+
+Our solution consisted of an working prototype with a client build with React Native and a server built with Node.js, MongoDB and Mongoose. The server retrieved data from the sensors every 30 minutes. Then it calculated a "dirtyness-index" for each space based on the amount of detected people and the weather, which it then stored in a database. The client could then retrieve the "dirtyness-index" from the database. In addition to this, the client have the capability to update the database in order to mark spaces as clean. This allows the user to reset the "dirtyness-index" of a space if they have cleaned it. 
+
+### Role
+Developer
+
+### Gallery
+
+![Image of user interface](stadp1.png)
+*Main screen of the app, with building and floor indicated in text. The spaces are shown as colored squares, where red and yellow indicates that the spaces needs cleaning (red is more urgent). and blue means recently cleaned.*
+
+![Image of user interface](stadp2.png)
+*Floor selection screen. The building is determined with GPS.*
+
+![Image of user interface](stadp3.png)
+*If the user clicks a non-blue space it gets a notification asking if they cleaned the space. If they press yes, the space turns blue, thus indicating that it was recently cleaned. *

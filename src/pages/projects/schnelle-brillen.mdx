@@ -1,0 +1,28 @@
+---
+title: Schnelle Brillen App
+image: poster_dbt_small.png
+---
+## Project Summary
+
+This project was part of a course called "Produktutveckling i medieteknik med metoden Design-Build-Test" at Umeå University, where the course participants were divided into teams. Each team were then given the task to design, build and test a concept for a company.
+
+The group I was part of was given the task to develop an app for a web-based sunglasses store in the netherlands called "schnellebrillen.nl". This company has a product range that consists of what they call "fast glasses", which is a slang expression that roughly refers to sunglasses that looks fast, i.e is aerodynamic.
+
+We decided to create a IOS and a android app which could determine wether a pair of sunglasses is "fast" or not, this would be determined with the help of a neural network. In addition, the app were to have a store where the user can browse the store's products.
+
+We ended up with a working prototype with three views; a home view (visible in the image to the right), a camera view and a store. the pictures taken by the camera is sent to two different tensorflow-models, where the first one finds the sunglasses, and then sends a cropped version of the picture to the other tensorflow-model, which determines wether the sunglasses are "fast" or not. In order to train these models, we had to create two large datasets, which consisted of pictures depicting people with "fast" and "slow" glasses respectively. these data sets consisted of around 2000 pictures each. The app will create visual indicators in the picture if and where sunglasses are found, and wether they are "fast" or not. 
+
+### Role
+Front End Designer
+
+### Gallery
+
+![Project pitch poster](poster_dbt_finished_png.png)
+*Poster used to promote the presentation of the app.*
+
+![Image of user interface](schnelleb.png)
+*The home view of the app.*
+
+
+![Images reviewed by the tensorflow models](schnelleb2.png)
+*Image where the model determined that the sunglasses were fast.*
